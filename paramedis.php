@@ -73,7 +73,7 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="login.html">Keluar</a></li>
+                    <li><a href="index.php">Keluar</a></li>
                 </ul>
             </div>
             <!-- user dropdown ends -->
@@ -114,7 +114,7 @@
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Menu Utama</li>
-                        <li><a class="ajax-link" href="index.php"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
+                        <li><a class="ajax-link" href="beranda.php"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
                         </li>
                         <li><a class="ajax-link" href="admin.php"><i class="glyphicon glyphicon-user"></i><span> Daftar Admin</span></a>
                         </li>
