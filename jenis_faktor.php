@@ -7,7 +7,7 @@
                         <a href="beranda.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Daftar Paramedis</a>
+                        <a href="#">Jenis Faktor Gejala</a>
                     </li>
                 </ul>
             </div>
@@ -16,7 +16,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list"></i> List Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-list"></i> List Jenis Faktor Gejala</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -25,7 +25,7 @@
             </div>
             <div class="box-content">
                 <input type="text" id="search" placeholder="Pencarian..."></input>
-                <table class="table table-striped table-bordered responsive">
+                <table class="table table-striped table-bordered responsive" id="myTable">
                 <thead>
                 <tr>
                     <th>Username</th>
@@ -476,7 +476,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Jenis Faktor Gejala</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -488,30 +488,9 @@
                 <form role="form">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
-                        <label>Nama Paramedis</label>
-                        <input type="text" class="form-control" placeholder="Nama Admin">
+                        <label>Nama Jenis Faktor Gejala</label>
+                        <input type="text" class="form-control" placeholder="Nama Jenis Faktor Gejala">
                     </div>
-                    <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="username">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="text" class="form-control" placeholder="password">
-                    </div>
-                    <div class="form-group">
-                        <label>Tanggal Lahir</label>
-                        <input type="Date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>No. Telp/HP</label>
-                        <input type="text" class="form-control" placeholder="No. Telp/HP">
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat</label>
-                        <input type="text" class="form-control" placeholder="Alamat">
-                    </div>
-                    
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 </div>

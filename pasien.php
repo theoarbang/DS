@@ -1,4 +1,5 @@
 <?php require('header.php'); ?>
+
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
             <div>
@@ -7,7 +8,7 @@
                         <a href="beranda.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Daftar Paramedis</a>
+                        <a href="#">Daftar Pasien</a>
                     </li>
                 </ul>
             </div>
@@ -16,7 +17,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list"></i> List Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-list"></i> List Pasien</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -25,7 +26,7 @@
             </div>
             <div class="box-content">
                 <input type="text" id="search" placeholder="Pencarian..."></input>
-                <table class="table table-striped table-bordered responsive">
+                <table class="table table-striped table-bordered responsive" id="myTable">
                 <thead>
                 <tr>
                     <th>Username</th>
@@ -44,6 +45,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -62,6 +66,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -80,6 +87,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -98,6 +108,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -116,6 +129,9 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -134,6 +150,9 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -149,9 +168,12 @@
                     <td class="center">2012/03/01</td>
                     <td class="center">Member</td>
                     <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
+                        <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -167,9 +189,12 @@
                     <td class="center">2012/03/01</td>
                     <td class="center">Member</td>
                     <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
+                        <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -188,6 +213,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -206,6 +234,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -224,6 +255,9 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -242,6 +276,9 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -260,6 +297,9 @@
                         <span class="label-default label">Inactive</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -278,6 +318,9 @@
                         <span class="label-default label">Inactive</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -293,9 +336,12 @@
                     <td class="center">2012/03/01</td>
                     <td class="center">Member</td>
                     <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
+                        <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -311,9 +357,12 @@
                     <td class="center">2012/03/01</td>
                     <td class="center">Member</td>
                     <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
+                        <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -329,9 +378,12 @@
                     <td class="center">2012/03/01</td>
                     <td class="center">Member</td>
                     <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
+                        <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
+                        </a>
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -350,114 +402,9 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
+                        <a class="btn btn-primary" href="#">
+                            Berkunjung
                         </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Abdullah</td>
-                    <td class="center">2012/02/01</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-default label label-danger">Banned</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Dow John</td>
-                    <td class="center">2012/02/01</td>
-                    <td class="center">Admin</td>
-                    <td class="center">
-                        <span class="label-default label">Inactive</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>John R</td>
-                    <td class="center">2012/02/01</td>
-                    <td class="center">Admin</td>
-                    <td class="center">
-                        <span class="label-default label">Inactive</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Paul Wilson</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Brown Blue</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Worth Name</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-warning label label-default">Pending</span>
-                    </td>
-                    <td class="center">
                         <a class="btn btn-info btn-setting" href="#">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             
@@ -476,7 +423,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Pasien</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -488,28 +435,40 @@
                 <form role="form">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
-                        <label>Nama Paramedis</label>
-                        <input type="text" class="form-control" placeholder="Nama Admin">
-                    </div>
-                    <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="username">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="text" class="form-control" placeholder="password">
+                        <label>Nama Pasien</label>
+                        <input type="text" class="form-control" placeholder="Nama Pasien">
                     </div>
                     <div class="form-group">
                         <label>Tanggal Lahir</label>
                         <input type="Date" class="form-control">
                     </div>
                     <div class="form-group">
+                        <label>Alamat</label>
+                        <input type="text" class="form-control" placeholder="Alamat Pasien">
+                    </div>
+                    <div class="form-group">
                         <label>No. Telp/HP</label>
                         <input type="text" class="form-control" placeholder="No. Telp/HP">
                     </div>
                     <div class="form-group">
-                        <label>Alamat</label>
-                        <input type="text" class="form-control" placeholder="Alamat">
+                        <label>Jenis Kelamin</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Pria
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Wanita
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Status Pernikahan</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Belum Menikah
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Menikah
+                        </label>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Submit</button>

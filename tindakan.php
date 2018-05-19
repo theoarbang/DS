@@ -7,7 +7,7 @@
                         <a href="beranda.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Daftar Paramedis</a>
+                        <a href="#">Tindakan</a>
                     </li>
                 </ul>
             </div>
@@ -16,7 +16,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list"></i> List Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-list"></i> List Tindakan</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -25,7 +25,7 @@
             </div>
             <div class="box-content">
                 <input type="text" id="search" placeholder="Pencarian..."></input>
-                <table class="table table-striped table-bordered responsive">
+                <table class="table table-striped table-bordered responsive" id="myTable">
                 <thead>
                 <tr>
                     <th>Username</th>
@@ -476,7 +476,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Administrator</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -488,7 +488,7 @@
                 <form role="form">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
-                        <label>Nama Paramedis</label>
+                        <label>Nama Admin</label>
                         <input type="text" class="form-control" placeholder="Nama Admin">
                     </div>
                     <div class="form-group">
@@ -510,6 +510,16 @@
                     <div class="form-group">
                         <label>Alamat</label>
                         <input type="text" class="form-control" placeholder="Alamat">
+                    </div>
+                    <div class="form-group">
+                        <label>Status Admin</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Administrator
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Pakar
+                        </label>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Submit</button>

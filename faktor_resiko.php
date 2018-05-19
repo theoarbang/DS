@@ -7,7 +7,7 @@
                         <a href="beranda.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Daftar Paramedis</a>
+                        <a href="#">Faktor Resiko Gejala</a>
                     </li>
                 </ul>
             </div>
@@ -16,7 +16,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list"></i> List Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-list"></i> List Faktor Resiko Gejala</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -25,7 +25,7 @@
             </div>
             <div class="box-content">
                 <input type="text" id="search" placeholder="Pencarian..."></input>
-                <table class="table table-striped table-bordered responsive">
+                <table class="table table-striped table-bordered responsive" id="myTable">
                 <thead>
                 <tr>
                     <th>Username</th>
@@ -476,7 +476,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Paramedis</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Faktor Resiko Gejala</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -488,30 +488,48 @@
                 <form role="form">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
-                        <label>Nama Paramedis</label>
-                        <input type="text" class="form-control" placeholder="Nama Admin">
+                        <label>Nama Jenis Faktor Resiko Gejala</label>
+                        <!--
+                        <input type="text" class="form-control" placeholder="Nama Jenis Faktor Resiko Gejala">
+                        -->
+                        <div class="controls">
+                        <select data-placeholder="Jenis Faktor Resiko Gejala" id="selectError2" data-rel="chosen">
+                            <option value=""></option>
+                            <optgroup label="NFC EAST">
+                                <option>Dallas Cowboys</option>
+                                <option>New York Giants</option>
+                                <option>Philadelphia Eagles</option>
+                                <option>Washington Redskins</option>
+                            </optgroup>
+                            <optgroup label="NFC NORTH">
+                                <option>Chicago Bears</option>
+                                <option>Detroit Lions</option>
+                                <option>Green Bay Packers</option>
+                                <option>Minnesota Vikings</option>
+                            </optgroup>
+                            <optgroup label="NFC SOUTH">
+                                <option>Atlanta Falcons</option>
+                                <option>Carolina Panthers</option>
+                                <option>New Orleans Saints</option>
+                                <option>Tampa Bay Buccaneers</option>
+                            </optgroup>
+                            <optgroup label="NFC WEST">
+                                <option>Arizona Cardinals</option>
+                                <option>St. Louis Rams</option>
+                                <option>San Francisco 49ers</option>
+                                <option>Seattle Seahawks</option>
+                            </optgroup>
+                        </select>
+                    </div>
                     </div>
                     <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="username">
+                        <label>Nama Faktor Resiko Gejala</label>
+                        <input type="text" class="form-control" placeholder="Nama Faktor Resiko Gejala">
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
-                        <input type="text" class="form-control" placeholder="password">
-                    </div>
-                    <div class="form-group">
-                        <label>Tanggal Lahir</label>
-                        <input type="Date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>No. Telp/HP</label>
-                        <input type="text" class="form-control" placeholder="No. Telp/HP">
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat</label>
-                        <input type="text" class="form-control" placeholder="Alamat">
-                    </div>
-                    
+                        <label>Densitas</label>
+                        <input type="text" class="form-control" placeholder="Densitas">
+                    </div>                    
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 </div>

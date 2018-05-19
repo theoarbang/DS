@@ -48,9 +48,8 @@
     <![endif]-->
 
     <!-- The fav icon -->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/logo1.png">
         <style> 
-            @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee);
             body {
                 background: #eedfcc url(img/bg_jantung.jpg) no-repeat center top;
                 -webkit-background-size: cover;
