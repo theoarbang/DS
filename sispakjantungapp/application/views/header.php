@@ -103,25 +103,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Menu Utama</li>
-                        <li><a class="ajax-link" href="beranda.php"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/beranda');?>"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
                         </li>
-                        <li><a class="ajax-link" href="admin.php"><i class="glyphicon glyphicon-user"></i><span> Daftar Admin / Pakar</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/admin');?>"><i class="glyphicon glyphicon-user"></i><span> Daftar Admin / Pakar</span></a>
                         </li>
-                        <li><a class="ajax-link" href="paramedis.php"><i class="glyphicon glyphicon-user"></i><span> Daftar Paramedis</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/paramedis');?>"><i class="glyphicon glyphicon-user"></i><span> Daftar Paramedis</span></a>
                         </li>
-                        <li><a class="ajax-link" href="bantuan.php"><i class="glyphicon glyphicon-question-sign"></i><span> Bantuan</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/bantuan');?>"><i class="glyphicon glyphicon-question-sign"></i><span> Bantuan</span></a>
                         </li>
-                        <li><a class="ajax-link" href="jenis_faktor.php"><i class="glyphicon glyphicon-list"></i><span> Jenis Faktor Resiko</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/jresikogejala');?>"><i class="glyphicon glyphicon-list"></i><span> Jenis Faktor Resiko</span></a>
                         </li>
-                        <li><a class="ajax-link" href="faktor_resiko.php"><i class="glyphicon glyphicon-list-alt"></i><span> Faktor Resiko Gejala</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/fresikogejala');?>"><i class="glyphicon glyphicon-list-alt"></i><span> Faktor Resiko Gejala</span></a>
                         </li>
                         <li><a class="ajax-link" href="<?php echo site_url('admin/diagnosa');?>"><i class="glyphicon glyphicon-tasks"></i><span> Diagnosa</span></a>
                         </li>
-                        <li><a class="ajax-link" href="tindakan.php"><i class="glyphicon glyphicon-ok"></i><span> Tindakan</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/tindakan');?>"><i class="glyphicon glyphicon-ok"></i><span> Tindakan</span></a>
                         </li>
-                        <li><a class="ajax-link" href="prognosis.php"><i class="glyphicon glyphicon-book"></i><span> Prognosis</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/prognosis');?>"><i class="glyphicon glyphicon-book"></i><span> Prognosis</span></a>
                         </li>
-                        <li><a class="ajax-link" href="pasien.php"><i class="glyphicon glyphicon-heart"></i><span> Data Pasien</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/pasien');?>"><i class="glyphicon glyphicon-heart"></i><span> Data Pasien</span></a>
                         </li>
                     </ul>
                     <!--

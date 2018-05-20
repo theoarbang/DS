@@ -1,4 +1,4 @@
-<?php require('header.php'); ?>
+<?php $this->load->view('header')?>
 
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
@@ -29,392 +29,44 @@
                 <table class="table table-striped table-bordered responsive" id="myTable">
                 <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Date registered</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Tanggal lahir</th>
+                    <th>Alamat</th>
+                    <th>Telp</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Status perkawinan</th>
+                    <th>action</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>David R</td>
-                    <td class="center">2012/01/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Chris Jack</td>
-                    <td class="center">2012/01/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jack Chris</td>
-                    <td class="center">2012/01/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Muhammad Usman</td>
-                    <td class="center">2012/01/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sheikh Heera</td>
-                    <td class="center">2012/02/01</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-default label label-danger">Banned</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Helen Garner</td>
-                    <td class="center">2012/02/01</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-default label label-danger">Banned</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Saruar Ahmed</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-primary label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ahemd Saruar</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-primary label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Habib Rizwan</td>
-                    <td class="center">2012/01/21</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Rizwan Habib</td>
-                    <td class="center">2012/01/21</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Amrin Sana</td>
-                    <td class="center">2012/08/23</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-default label label-danger">Banned</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sana Amrin</td>
-                    <td class="center">2012/08/23</td>
-                    <td class="center">Staff</td>
-                    <td class="center">
-                        <span class="label-default label label-danger">Banned</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ifrah Jannat</td>
-                    <td class="center">2012/06/01</td>
-                    <td class="center">Admin</td>
-                    <td class="center">
-                        <span class="label-default label">Inactive</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jannat Ifrah</td>
-                    <td class="center">2012/06/01</td>
-                    <td class="center">Admin</td>
-                    <td class="center">
-                        <span class="label-default label">Inactive</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Robert</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-primary label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Dave Robert</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-primary label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Brown Robert</td>
-                    <td class="center">2012/03/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-primary label label-default">Pending</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Usman Muhammad</td>
-                    <td class="center">2012/01/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">
-                        <span class="label-success label label-default">Active</span>
-                    </td>
-                    <td class="center">
-                        <a class="btn btn-primary" href="#">
-                            Berkunjung
-                        </a>
-                        <a class="btn btn-info btn-setting" href="#">
-                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                            
-                        </a>
-                        <a class="btn btn-danger" href="#">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            
-                        </a>
-                    </td>
-                </tr>
+                <?php 
+                $i = 1;
+                foreach ($records as $r) { 
+                echo '<tr>';
+                echo '    <td>'.$r->id_pasien.'</td>';
+                echo '    <td class="center">'.$r->nama_pasien.'</td>';
+                echo '    <td class="center">'.$r->tgl_lahir_pasien.'</td>';
+                echo '    <td class="center">'.$r->alamat_pasien.'</td>';
+                echo '    <td class="center">'.$r->telp_pasien.'</td>';
+                echo '    <td class="center">'.$r->jk_pasien.'</td>';
+                echo '    <td class="center">'.$r->status.'</td>';
+                echo '    <td class="center">';
+                echo '        <a class="btn btn-primary" href="#">';
+                echo '            Berkunjung';
+                echo '        </a>';
+                echo '        <a class="btn btn-info btn-setting" href="#">';
+                echo '            <i class="glyphicon glyphicon-edit icon-white"></i>';
+                echo '            ';
+                echo '        </a>';
+                echo '        <a class="btn btn-danger" href="#">';
+                echo '            <i class="glyphicon glyphicon-trash icon-white"></i>';
+                echo '            ';
+                echo '        </a>';
+                echo '    </td>';
+                echo '</tr>';
+            }
+                ?>
                 </tbody>
                 </table>
             </div>
@@ -501,4 +153,4 @@
     </div>
 
     <hr>
-<?php require('footer.php'); ?>
+<?php $this->load->view('footer')?>
