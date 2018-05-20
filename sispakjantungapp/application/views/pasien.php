@@ -84,42 +84,42 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form">
+                <form role="form" site_url('admin/addpasien')>
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
                         <label>Nama Pasien</label>
-                        <input type="text" class="form-control" placeholder="Nama Pasien">
+                        <input type="text" class="form-control" placeholder="Nama Pasien" name="nama_pasien">
                     </div>
                     <div class="form-group">
                         <label>Tanggal Lahir</label>
-                        <input type="Date" class="form-control">
+                        <input type="Date" class="form-control" name="tgl_lahir_pasien" name="tgl_lahir_pasien">
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
-                        <input type="text" class="form-control" placeholder="Alamat Pasien">
+                        <input type="text" class="form-control" placeholder="Alamat Pasien" name="alamat_pasien">
                     </div>
                     <div class="form-group">
                         <label>No. Telp/HP</label>
-                        <input type="text" class="form-control" placeholder="No. Telp/HP">
+                        <input type="text" class="form-control" placeholder="No. Telp/HP" name="telp_pasien">
                     </div>
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Pria
+                            <input type="radio" name="jk_pasien" id="inlineRadio1" value="Pria"> Pria
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Wanita
+                            <input type="radio" name="jk_pasien" id="inlineRadio2" value="Wanita"> Wanita
                         </label>
                     </div>
                     <div class="form-group">
                         <label>Status Pernikahan</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Belum Menikah
+                            <input type="radio" name="status" id="inlineRadio1" value="Belum Menikah"> Belum Menikah
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Menikah
+                            <input type="radio" name="status" id="inlineRadio2" value="Menikah"> Menikah
                         </label>
                     </div>
                     
