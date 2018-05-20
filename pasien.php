@@ -45,7 +45,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -66,7 +66,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -87,7 +87,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -108,7 +108,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -129,7 +129,7 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -150,7 +150,7 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -171,7 +171,7 @@
                         <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -192,7 +192,7 @@
                         <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -213,7 +213,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -234,7 +234,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -255,7 +255,7 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -276,7 +276,7 @@
                         <span class="label-default label label-danger">Banned</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -297,7 +297,7 @@
                         <span class="label-default label">Inactive</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -318,7 +318,7 @@
                         <span class="label-default label">Inactive</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -339,7 +339,7 @@
                         <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -360,7 +360,7 @@
                         <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -381,7 +381,7 @@
                         <span class="label-primary label label-default">Pending</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
@@ -402,7 +402,7 @@
                         <span class="label-success label label-default">Active</span>
                     </td>
                     <td class="center">
-                        <a class="btn btn-primary" href="#">
+                        <a class="btn btn-primary" href="pasien_diagnosa.php">
                             Berkunjung
                         </a>
                         <a class="btn btn-info btn-setting" href="#">
