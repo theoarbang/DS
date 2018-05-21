@@ -55,11 +55,11 @@
                 echo '        <a class="btn btn-primary" href="#">';
                 echo '            Berkunjung';
                 echo '        </a>';
-                echo '        <a class="btn btn-info btn-setting" href="'.site_url('admin/editpasien/').$r->id_pasien.'">';
+                echo '        <a class="btn btn-info btn-setting" href="'.site_url('admin/editpasien').'">';
                 echo '            <i class="glyphicon glyphicon-edit icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
-                echo '        <a class="btn btn-danger" href="'.site_url('admin/delpasien/').$r->id_pasien.'">';
+                echo '        <a class="btn btn-danger" href="'.site_url('admin/delpasien').'">';
                 echo '            <i class="glyphicon glyphicon-trash icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
@@ -75,7 +75,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Pasien</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Ubah Pasien</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -84,42 +84,58 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form" action="<?php echo site_url('admin/addpasien'); ?>" method="POST">
-                    <input type="hidden" placeholder="Enter email">
+                <form role="form" action="<?php echo site_url('admin/updatepasien'); ?>" method="POST">
+                    <input type="hidden" placeholder="Enter email" name="id" value="<?php echo $dataedit[0]->id_pasien ?>">
                     <div class="form-group">
                         <label>Nama Pasien</label>
-                        <input type="text" class="form-control" placeholder="Nama Pasien" name="nama_pasien">
+                        <input type="text" class="form-control" placeholder="Nama Pasien" name="nama_pasien" value="<?php echo $dataedit[0]->nama_pasien ?>">
                     </div>
                     <div class="form-group">
                         <label>Tanggal Lahir</label>
-                        <input type="Date" class="form-control" name="tgl_lahir_pasien">
+                        <input type="Date" class="form-control" name="tgl_lahir_pasien" value="<?php echo $dataedit[0]->tgl_lahir_pasien ?>">
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
-                        <input type="text" class="form-control" placeholder="Alamat Pasien" name="alamat_pasien">
+                        <input type="text" class="form-control" placeholder="Alamat Pasien" name="alamat_pasien" value="<?php echo $dataedit[0]->alamat_pasien ?>">
                     </div>
                     <div class="form-group">
                         <label>No. Telp/HP</label>
-                        <input type="text" class="form-control" placeholder="No. Telp/HP" name="telp_pasien">
+                        <input type="text" class="form-control" placeholder="No. Telp/HP" name="telp_pasien" value="<?php echo $dataedit[0]->telp_pasien ?>">
                     </div>
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="jk_pasien" id="inlineRadio1" value="Pria"> Pria
+                        <?php if ($dataedit[0]->jk_pasien == 'Pria') {
+                            echo '<input type="radio" name="jk_pasien" id="inlineRadio1" value="Pria" checked> Pria';
+                        }else{
+                            echo '<input type="radio" name="jk_pasien" id="inlineRadio1" value="Pria"> Pria';
+                        }?>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="jk_pasien" id="inlineRadio2" value="Wanita"> Wanita
+                            <?php if ($dataedit[0]->jk_pasien == 'Wanita') {
+                                echo '<input type="radio" name="jk_pasien" id="inlineRadio2" value="Wanita" checked> Wanita';
+                            }else{
+                                echo '<input type="radio" name="jk_pasien" id="inlineRadio2" value="Wanita"> Wanita';
+                            }?>
                         </label>
                     </div>
                     <div class="form-group">
                         <label>Status Pernikahan</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="status" id="inlineRadio1" value="Belum Menikah"> Belum Menikah
+                            <?php if ($dataedit[0]->status == 'Belum Menikah') {
+                                echo '<input type="radio" name="status" id="inlineRadio1" value="Belum Menikah" checked> Belum Menikah';
+                            }else{
+                                echo '<input type="radio" name="status" id="inlineRadio1" value="Belum Menikah"> Belum Menikah';
+                            }?>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="status" id="inlineRadio2" value="Menikah"> Menikah
+                            <?php if ($dataedit[0]->status == 'Menikah') {
+                                echo '<input type="radio" name="status" id="inlineRadio1" value="Menikah" checked> Menikah';
+                            }else{
+                                echo '<input type="radio" name="status" id="inlineRadio2" value="Menikah"> Menikah';
+                            }?>
                         </label>
                     </div>
                     
