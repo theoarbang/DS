@@ -217,7 +217,7 @@ class Admin extends CI_Controller {
 	public function editpasien($id){
 		$query = $this->db->get('tb_pasien');
 		$data['records'] = $query->result();
-		$sql = "SELECT * FROM `tb_pasien` WHERE `id_pasien`=1".$id;
+		$sql = "SELECT * FROM `tb_pasien` WHERE `id_pasien`=".$id;
 		$query = $this->db->query($sql);
 		$data['dataedit'] = $query->result();
 		$this->load->view('edit_pasien',$data);
@@ -233,7 +233,7 @@ class Admin extends CI_Controller {
 				'status' => $this->input->post('status')
 				);
 		$id = $this->input->post('id');
-		$this->diagnosa_model->updatediagnosa($data,$id);
+		$this->pasien_model->updatepasien($data,$id);
 		redirect('admin/pasien','refresh');
 	}
 }

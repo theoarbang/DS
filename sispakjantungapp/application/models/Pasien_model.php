@@ -12,7 +12,7 @@ class Pasien_model extends CI_Model {
 	public function updatepasien($data, $id){
 			$this->db->set($data);
 			$this->db->where("id_pasien", $id);
-			$this->db->update('tb_faktor_resiko_gejala', $data);
+			$this->db->update('tb_pasien', $data);
 	}
 
 	public function addpasien($data){
