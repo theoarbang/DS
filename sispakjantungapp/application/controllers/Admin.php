@@ -31,6 +31,11 @@ class Admin extends CI_Controller {
 		$this->load->model('faktor_resiko_gejala_model');
 		$this->load->model('jenis_resiko_gejala_model');
 		$this->load->model('pasien_model');
+		$this->load->model('admin_pakar_model');
+		$this->load->model('paramedis_model');
+		$this->load->model('prognosis_model');
+		$this->load->model('tindakan_model');
+		$this->load->model('rule_model');
 	}
 
 	public function index()
@@ -44,11 +49,100 @@ class Admin extends CI_Controller {
 	}
 //--------------------admin-------------------------------
 	public function admin(){
-		$this->load->view('admin');
+		$query = $this->db->get('tb_administrator');
+		$data['records'] = $query->result();
+		$this->load->view('admin',$data);
 	}
+
+	public function addpakar(){
+		$data = array(
+				'nama_admin' => $this->input->post('nama_admin'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password'),
+				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+				'telp' => $this->input->post('telp'),
+				'alamat' => $this->input->post('alamat'),
+				'admin' => $this->input->post('admin')
+				);
+		$this->admin_pakar_model->addpakar($data);
+		redirect('admin/admin','refresh');
+	}
+
+	public function delpakar($id){
+		$this->admin_pakar_model->delpakar($id);
+		redirect('admin/admin',refresh);
+	}
+
+	public function editpakar($id){
+		$query = $this->db->get('tb_administrator');
+		$data['records'] = $query->result();
+		$sql = "SELECT * FROM `tb_administrator` WHERE id_administrator = ".$id;
+		$query = $this->db->query($sql);
+		$data['dataedit'] = $query->result();
+		$this->load->view('edit_admin',$data);
+	}
+
+	public function updatepakar(){
+		$data = array(
+				'nama_admin' => $this->input->post('nama_admin'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password'),
+				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+				'telp' => $this->input->post('telp'),
+				'alamat' => $this->input->post('alamat'),
+				'admin' => $this->input->post('admin')
+				);
+		$id = $this->input->post('id');
+		$this->admin_pakar_model->updatepakar($data,$id);
+		redirect('admin/admin','refresh');
+	}
+	
 //--------------------paramedis-------------------------------
-	public function paramedis(){
-		$this->load->view('paramedis');
+public function paramedis(){
+		$query = $this->db->get('tb_paramedis');
+		$data['records'] = $query->result();
+		$this->load->view('paramedis',$data);
+	}
+
+	public function addparamedis(){
+		$data = array(
+				'nama_paramedis' => $this->input->post('nama_paramedis'),
+				'tgl_lahir' => $this->input->post('tgl_lahir'),
+				'alamat' => $this->input->post('alamat'),
+				'telp' => $this->input->post('telp'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password')
+				);
+		$this->paramedis_model->addparamedis($data);
+		redirect('admin/paramedis','refresh');
+	}
+
+	public function delparamedis($id){
+		$this->paramedis_model->delparamedis($id);
+		redirect('admin/paramedis',refresh);
+	}
+
+	public function editparamedis($id){
+		$query = $this->db->get('tb_paramedis');
+		$data['records'] = $query->result();
+		$sql = "SELECT * FROM `tb_paramedis` WHERE id_paramedis = ".$id;
+		$query = $this->db->query($sql);
+		$data['dataedit'] = $query->result();
+		$this->load->view('edit_paramedis',$data);
+	}
+
+	public function updateparamedis(){
+		$data = array(
+				'nama_paramedis' => $this->input->post('nama_paramedis'),
+				'tgl_lahir' => $this->input->post('tgl_lahir'),
+				'alamat' => $this->input->post('alamat'),
+				'telp' => $this->input->post('telp'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password')
+				);
+		$id = $this->input->post('id');
+		$this->paramedis_model->updateparamedis($data,$id);
+		redirect('admin/paramedis','refresh');
 	}
 //--------------------bantuan-------------------------------
 	public function bantuan(){
@@ -183,11 +277,80 @@ class Admin extends CI_Controller {
 
 	//--------------------tindakan-------------------------------
 	public function tindakan(){
-		$this->load->view('tindakan');
+		$query = $this->db->get('tb_tindakan');
+		$data['records'] = $query->result();
+		$this->load->view('tindakan',$data);
 	}
+
+	public function addtindakan(){
+		$data = array(
+				'nama_tindakan' => $this->input->post('nama_tindakan'),
+				'detail' => $this->input->post('detail')
+				);
+		$this->tindakan_model->addtindakan($data);
+		redirect('admin/tindakan','refresh');
+	}
+
+	public function deltindakan($id){
+		$this->tindakan_model->deltindakan($id);
+		redirect('admin/tindakan',refresh);
+	}
+
+	public function edittindakan($id){
+		$query = $this->db->get('tb_tindakan');
+		$data['records'] = $query->result();
+		$sql = "SELECT * FROM `tb_tindakan` WHERE id_tindakan = ".$id;
+		$query = $this->db->query($sql);
+		$data['dataedit'] = $query->result();
+		$this->load->view('edit_tindakan',$data);
+	}
+
+	public function updatetindakan(){
+		$data = array(
+				'nama_tindakan' => $this->input->post('nama_tindakan'),
+				'detail' => $this->input->post('detail')
+				);
+		$id = $this->input->post('id');
+		$this->tindakan_model->updatetindakan($data,$id);
+		redirect('admin/tindakan','refresh');
+	}
+
 	//--------------------prognosis-------------------------------
 	public function prognosis(){
-		$this->load->view('prognosis');
+		$query = $this->db->get('tb_prognosis');
+		$data['records'] = $query->result();
+		$this->load->view('prognosis',$data);
+	}
+
+	public function addprognosis(){
+		$data = array(
+				'nama_prognosis' => $this->input->post('nama_prognosis')
+				);
+		$this->prognosis_model->addprognosis($data);
+		redirect('admin/prognosis','refresh');
+	}
+
+	public function delprognosis($id){
+		$this->prognosis_model->delprognosis($id);
+		redirect('admin/prognosis','refresh');
+	}
+
+	public function editprognosis($id){
+		$query = $this->db->get('tb_prognosis');
+		$data['records'] = $query->result();
+		$sql = "SELECT * FROM `tb_prognosis` WHERE `id_prognosis`=".$id;
+		$query = $this->db->query($sql);
+		$data['dataedit'] = $query->result();
+		$this->load->view('edit_prognosis',$data);
+	}
+
+	public function updateprognosis(){
+		$data = array(
+				'nama_prognosis' => $this->input->post('nama_prognosis')
+				);
+		$id = $this->input->post('id');
+		$this->prognosis_model->updateprognosis($data,$id);
+		redirect('admin/prognosis','refresh');
 	}
 	//--------------------data pasien-------------------------------
 	public function pasien(){
@@ -236,4 +399,71 @@ class Admin extends CI_Controller {
 		$this->pasien_model->updatepasien($data,$id);
 		redirect('admin/pasien','refresh');
 	}
+
+	//----------------Berkunjung------------------------------------------------------------
+	public function berkunjung($id){
+		$sql = "SELECT * FROM `tb_pasien` WHERE `id_pasien`=".$id;
+		$query = $this->db->query($sql);
+		$temp = $query->result();
+		$temp[0]->tgl_lahir_pasien;
+
+		//hitung umur
+		$from = new DateTime($temp[0]->tgl_lahir_pasien);
+		$to   = new DateTime('today');
+		$umur = $from->diff($to)->y;
+		$data['dataedit'] = $temp;
+		$data['umur'] = $umur;	
+		$this->load->view('pasien_diagnosa',$data);
+	}
+
+	//----------------Rule-------------------------------------------------------------------
+	public function rule(){
+		$sql = "SELECT `id_keputusan`, tb_faktor_resiko_gejala.nama_faktor_resiko_gejala, tb_diagnosa.nama_diagnosa, tb_faktor_resiko_gejala.densitas FROM `tb_keputusan`, tb_faktor_resiko_gejala, tb_diagnosa WHERE tb_faktor_resiko_gejala.id_faktor_resiko_gejala = tb_keputusan.id_faktor_resiko_gejala AND tb_keputusan.id_diagnosa = tb_diagnosa.id_diagnosa ORDER BY id_keputusan";
+		$query = $this->db->query($sql);
+		$query_gejala = $this->db->get('tb_faktor_resiko_gejala');
+		$query_diagnosa = $this->db->get('tb_diagnosa');
+		$data['records'] = $query->result();
+		$data['records2'] = $query_gejala->result();
+		$data['records3'] = $query_diagnosa->result();
+		$this->load->view('rule',$data);
+	}
+
+	public function editrule($id){
+		$sql = "SELECT `id_keputusan`, tb_faktor_resiko_gejala.nama_faktor_resiko_gejala, tb_diagnosa.nama_diagnosa, tb_faktor_resiko_gejala.densitas FROM `tb_keputusan`, tb_faktor_resiko_gejala, tb_diagnosa WHERE tb_faktor_resiko_gejala.id_faktor_resiko_gejala = tb_keputusan.id_faktor_resiko_gejala AND tb_keputusan.id_diagnosa = tb_diagnosa.id_diagnosa ORDER BY id_keputusan";
+		$query = $this->db->query($sql);
+		$query_gejala = $this->db->get('tb_faktor_resiko_gejala');
+		$query_diagnosa = $this->db->get('tb_diagnosa');
+		$data['records'] = $query->result();
+		$data['records2'] = $query_gejala->result();
+		$data['records3'] = $query_diagnosa->result();
+		$sql_edit = "SELECT * FROM `tb_keputusan` WHERE id_keputusan = ".$id;
+		$query_edit = $this->db->query($sql_edit);
+		$data['dataedit'] = $query_edit->result();
+		$this->load->view('edit_rule',$data);
+	}
+
+	public function addrule(){
+		$data = array(
+				'id_faktor_resiko_gejala' => $this->input->post('faktor_resiko_gejala'),
+				'id_diagnosa' => $this->input->post('diagnosa')
+				);
+		$this->rule_model->addrule($data);
+		redirect('admin/rule','refresh');
+	}
+
+	public function delrule($id){
+		$this->rule_model->delrule($id);
+		redirect('admin/rule','refresh');
+	}
+
+	public function updaterule(){
+		$data = array(
+				'id_faktor_resiko_gejala' => $this->input->post('faktor_resiko_gejala'),
+				'id_diagnosa' => $this->input->post('diagnosa')
+				);
+		$id = $this->input->post('id');
+		$this->rule_model->updaterule($data,$id);
+		redirect('admin/rule','refresh');
+	}
+
 }

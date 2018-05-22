@@ -1,4 +1,4 @@
-<?php $this->load->view('header')?>
+z<?php $this->load->view('header')?>
 
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
@@ -52,7 +52,7 @@
                 echo '    <td class="center">'.$r->jk_pasien.'</td>';
                 echo '    <td class="center">'.$r->status.'</td>';
                 echo '    <td class="center">';
-                echo '        <a class="btn btn-primary" href="#">';
+                echo '        <a class="btn btn-primary" href="'.site_url('admin/berkunjung/').$r->id_pasien.'">';
                 echo '            Berkunjung';
                 echo '        </a>';
                 echo '        <a class="btn btn-info btn-setting" href="'.site_url('admin/editpasien/').$r->id_pasien.'">';
