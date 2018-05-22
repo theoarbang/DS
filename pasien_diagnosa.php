@@ -30,7 +30,7 @@
             </div>
             <div class="box-content row">
                 <div class="box-content col-md-6">
-                <form role="form">
+                <form role="form" method="post" action="hasil_diagnosa.php">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
                         <label>Nama Pasien</label>

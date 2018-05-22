@@ -7,7 +7,7 @@
                         <a href="beranda.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Tindakan</a>
+                        <a href="#">Keputusan</a>
                     </li>
                 </ul>
             </div>
@@ -16,7 +16,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list"></i> List Tindakan</h2>
+                <h2><i class="glyphicon glyphicon-list"></i> List Keputusan</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -476,7 +476,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Tindakan</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Keputusan</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -487,13 +487,65 @@
                 <div class="box-content">
                 <form role="form">
                     <input type="hidden" placeholder="Enter email">
-                    <div class="form-group">
-                        <label>Nama Tindakan</label>
-                        <input type="text" class="form-control" placeholder="Nama Tindakan">
+                    <div class="controls form-group">
+                        <label>Faktor Resiko Gejala</label><br>
+                        <select data-placeholder="Faktor Resiko Gejala" id="selectError2" data-rel="chosen">
+                            <option value=""></option>
+                            <optgroup label="NFC EAST">
+                                <option>Dallas Cowboys</option>
+                                <option>New York Giants</option>
+                                <option>Philadelphia Eagles</option>
+                                <option>Washington Redskins</option>
+                            </optgroup>
+                            <optgroup label="NFC NORTH">
+                                <option>Chicago Bears</option>
+                                <option>Detroit Lions</option>
+                                <option>Green Bay Packers</option>
+                                <option>Minnesota Vikings</option>
+                            </optgroup>
+                            <optgroup label="NFC SOUTH">
+                                <option>Atlanta Falcons</option>
+                                <option>Carolina Panthers</option>
+                                <option>New Orleans Saints</option>
+                                <option>Tampa Bay Buccaneers</option>
+                            </optgroup>
+                            <optgroup label="NFC WEST">
+                                <option>Arizona Cardinals</option>
+                                <option>St. Louis Rams</option>
+                                <option>San Francisco 49ers</option>
+                                <option>Seattle Seahawks</option>
+                            </optgroup>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label>Detail Tindakan</label>
-                        <input type="text" class="form-control" placeholder="Detail Tindakan">
+                    <div class="controls form-group">
+                        <label>Diagnosa</label><br>
+                        <select data-placeholder="Diagnosa" id="selectError2" data-rel="chosen">
+                            <option value=""></option>
+                            <optgroup label="NFC EAST">
+                                <option>Dallas Cowboys</option>
+                                <option>New York Giants</option>
+                                <option>Philadelphia Eagles</option>
+                                <option>Washington Redskins</option>
+                            </optgroup>
+                            <optgroup label="NFC NORTH">
+                                <option>Chicago Bears</option>
+                                <option>Detroit Lions</option>
+                                <option>Green Bay Packers</option>
+                                <option>Minnesota Vikings</option>
+                            </optgroup>
+                            <optgroup label="NFC SOUTH">
+                                <option>Atlanta Falcons</option>
+                                <option>Carolina Panthers</option>
+                                <option>New Orleans Saints</option>
+                                <option>Tampa Bay Buccaneers</option>
+                            </optgroup>
+                            <optgroup label="NFC WEST">
+                                <option>Arizona Cardinals</option>
+                                <option>St. Louis Rams</option>
+                                <option>San Francisco 49ers</option>
+                                <option>Seattle Seahawks</option>
+                            </optgroup>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

@@ -114,43 +114,7 @@
     <div class="row">
         
         <!-- left menu starts -->
-        <div class="col-sm-2 col-lg-2">
-            <div class="sidebar-nav">
-                <div class="nav-canvas">
-                    <div class="nav-sm nav nav-stacked">
-
-                    </div>
-                    <ul class="nav nav-pills nav-stacked main-menu">
-                        <li class="nav-header">Menu Utama</li>
-                        <li><a class="ajax-link" href="beranda.php"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="admin.php"><i class="glyphicon glyphicon-user"></i><span> Daftar Admin / Pakar</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="paramedis.php"><i class="glyphicon glyphicon-user"></i><span> Daftar Paramedis</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="bantuan.php"><i class="glyphicon glyphicon-question-sign"></i><span> Bantuan</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="jenis_faktor.php"><i class="glyphicon glyphicon-list"></i><span> Jenis Faktor Resiko</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="faktor_resiko.php"><i class="glyphicon glyphicon-list-alt"></i><span> Faktor Resiko Gejala</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="diagnosa.php"><i class="glyphicon glyphicon-tasks"></i><span> Diagnosa</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="keputusan.php"><i class="glyphicon glyphicon-screenshot"></i><span> Keputusan</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="tindakan.php"><i class="glyphicon glyphicon-ok"></i><span> Tindakan</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="prognosis.php"><i class="glyphicon glyphicon-book"></i><span> Prognosis</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="pasien.php"><i class="glyphicon glyphicon-heart"></i><span> Data Pasien</span></a>
-                        </li>
-                    </ul>
-                    <!--
-                    <label id="for-is-ajax" for="is-ajax"><input id="is-ajax" type="hidden" value="checked"></label>
-                    -->
-                </div>
-            </div>
-        </div>
+        
         <!--/span-->
         <!-- left menu ends -->
 
