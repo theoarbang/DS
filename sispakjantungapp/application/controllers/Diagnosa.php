@@ -35,7 +35,6 @@ class Diagnosa extends CI_Controller {
 				$hitung = $this->hitungDensitas($input_gejala);
 				unset($hitung["&theta;"]);
 				arsort($hitung);
-				print_r($hitung);
 
 				$codes=array_keys($hitung);
 				$sql="SELECT GROUP_CONCAT(nama_diagnosa) 
@@ -50,8 +49,6 @@ class Diagnosa extends CI_Controller {
 				$sql = "SELECT tb_tindakan.*, tb_tindakan_diagnosa.* FROM tb_tindakan_diagnosa INNER JOIN tb_tindakan ON tb_tindakan.id_tindakan = tb_tindakan_diagnosa.id_tindakan WHERE tb_tindakan_diagnosa.id_diagnosa = ".$codes[0];
 				$query = $this->db->query($sql);
 				$data['tindakan'] = $query->result();
-
-				echo "Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan ".round($hitung[$codes[0]]*100,2)."%";
 
 			}
 
@@ -169,6 +166,7 @@ class Diagnosa extends CI_Controller {
 					}
 				}
 			}
+
 			foreach($densitas_baru as $k=>$d){
 				if($k!="&theta;"){
 					$densitas_baru[$k]=$d/(1-(isset($densitas_baru["&theta;"])?$densitas_baru["&theta;"]:0));
