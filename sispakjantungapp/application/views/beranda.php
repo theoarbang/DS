@@ -29,12 +29,28 @@ if ($this->session->userdata('level')==1) {
             </div>
             <div class="box-content row">
                 <div class="col-md-12">
-                    <h1>Sistem Pakar Pendeteksi Resiko Jantung Koroner dengan Metode Dempster-Shafer <br>
-                        <small>Selamat Datang...</small>
+                    <h1>Selamat Datang !<br>
+                        <small>Sistem Pakar Pendeteksi Resiko Penyakit Jantung Koroner dengan Metode Dempster-Shafer</small>
                     </h1>
-                    <p>BlaBlaBlaBlaBlaBlaBlaBlaBlaBla</p>
-
-                    <p><b>BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla</b></p>
+                    <p>
+                        Sistem ini merupakan media konsultasi dan monitoring terhadap penyakit jantung koroner seseorang sehingga
+                        dapat meminimalkan terjadinya serangan jantung terhadap seseorang yang menyebabkan kematian. Sistem pakar
+                        ini juga berfungsi sebagai asisten bagi pakar dalam memberikan keputusan.
+                    </p>
+                    <p>
+                        Sistem ini dirancang dan dibangun untuk membantu paramedis dalam menganalisa tingkat resiko penyakit jantung koroner seseorang pasien. Proses analisa / diagnosa penyakit Jantung Koroner menggunakan metode <i>Dempster-Shafer</i> dengan pengetahuan pakar yang akan menghasilkan nilai ketidakpastian dalam mencari kemungkinan faktor-faktor resiko dan gejala yang akan mempengaruhi tingkat resiko penyakit jantung koroner seseorang.
+                    </p>
+                    <p>
+                        Pakar utama yang dilibatkan pada sistem ini sebagai acuan adalah 
+                        <ul>
+                            <li>
+                                <b>Dr. Hariadi H, SpPD, SpJP (K)</b> dari RS. Dr. Sardjito Yogyakarta
+                            </li>
+                            <li>
+                                <b>Dr. Budi Yuli, SpPD, SpJp (K)</b> dari RS. Dr. Sardjito Yogyakarta
+                            </li>
+                        </ul>
+                    </p>
                 </div>
 
             </div>
