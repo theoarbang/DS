@@ -117,7 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
                         </li>
                         <li><a class="ajax-link" href="<?php echo site_url('pakar/tindakandiagnosa');?>"><i class="glyphicon glyphicon-ok"></i><span>Tindakan Diagnosa</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo site_url('pakar/bantuan');?>"><i class="glyphicon glyphicon-ok"></i><span>Bantuan</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('pakar/bantuan');?>"><i class="glyphicon glyphicon-info-sign"></i><span>Bantuan</span></a>
                         </li>
                     </ul>
                     <!--
