@@ -84,7 +84,7 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form" action="<?php echo site_url('admin/addpasien'); ?>" method="POST">
+                <form role="form" action="<?php echo site_url('paramedis/addpasien'); ?>" method="POST">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
                         <label>Nama Pasien</label>

@@ -116,7 +116,7 @@ class Paramedis extends CI_Controller {
 	}
 
 	public function hasildiagnosa($id){
-		$sql = "SELECT a.*, b.*, c.*, d.*, e.*, f.*, g.* FROM `tb_diagnosa_kunjungan` a 
+		$sql = "SELECT a.*, a.densitas as densitas_kunjungan, b.*, c.*, d.*, e.*, f.*, g.* FROM `tb_diagnosa_kunjungan` a 
 				INNER JOIN tb_pasien b ON a.id_pasien = b.id_pasien
 				INNER JOIN tb_diagnosa c ON a.id_diagnosa = c.id_diagnosa
 				INNER JOIN tb_item_diagnosa_kunjungan d ON a.id_diagnosa_kunjungan = d.id_diagnosa_kunjungan

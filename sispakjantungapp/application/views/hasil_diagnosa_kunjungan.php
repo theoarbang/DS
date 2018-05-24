@@ -65,7 +65,7 @@
                         <tr>
                             <td><h4>Densitas</h4></td>
                             <td>:</td>
-                            <td><h4><?php echo $records[0]->densitas; ?> %</h4></td>
+                            <td><h4><?php echo round($records[0]->densitas_kunjungan * 100,2); ?> %</h4></td>
                         </tr>
                     </table>
                     <h3>Saran Tindakan</h3> <hr>

@@ -81,6 +81,8 @@ class Diagnosa extends CI_Controller {
 				'densitas'  => $hitung[$codes[0]]
 			);
 
+			$this->session->set_userdata('id_pasien', $id);
+
 			$this->kunjungan_model->addkunjungan($data2);
 
 			//add item faktor resiko gejala
