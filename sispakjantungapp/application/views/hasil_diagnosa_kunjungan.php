@@ -6,10 +6,10 @@
     
     <div class="box col-md-12">
         <div class="box-inner">
-            <div class="box-header well">
+            <div class="box-header well" >
                 <h2><i class="glyphicon glyphicon-folder-open"></i> Hasil Diagnosa</h2>
             </div>
-            <div class="box-content row">
+            <div class="box-content row" id="printableArea">
                 <div class="box-content col-md-10">
                     <h2>Data Pasien</h3> <hr>
                     <table class="table table-striped table-bordered responsive" id="myTable">
@@ -78,6 +78,7 @@
             </div>
         </div>
     </div>
+    <input type="button" class="btn btn-lg btn-primary" onclick="printDiv('printableArea')" value="Cetak Laporan Diagnosa" />
 </div>
 <!-- content ends -->
 
