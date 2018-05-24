@@ -130,6 +130,12 @@ class Paramedis extends CI_Controller {
 	}
 	//----------------Kunjungan-------------------------------------------------------------
 	public function kunjungan($id){
+		$newd = array(
+			'id_pasien' => $id
+		);
+		
+		$this->session->set_userdata( $newd );
+		
 		$sql = "SELECT a.id_diagnosa_kunjungan, b.nama_diagnosa, a.densitas FROM `tb_diagnosa_kunjungan` a, tb_diagnosa b WHERE a.id_diagnosa = b.id_diagnosa AND `id_pasien` = ".$id;
 		$query = $this->db->query($sql);
 		$data['records'] = $query->result();
