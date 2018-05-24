@@ -1,11 +1,11 @@
-<?php $this->load->view('header')?>
+<?php $this->load->view('header_paramedis')?>
 
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
             <div>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="beranda.php">Beranda</a>
+                        <a href="paramedis/beranda">Beranda</a>
                     </li>
                     <li>
                         <a href="#">Daftar Pasien</a>
@@ -55,11 +55,11 @@
                 echo '        <a class="btn btn-primary" href="#">';
                 echo '            Berkunjung';
                 echo '        </a>';
-                echo '        <a class="btn btn-info btn-setting" href="'.site_url('admin/editpasien').'">';
+                echo '        <a class="btn btn-info btn-setting" href="'.site_url('paramedis/editpasien').'">';
                 echo '            <i class="glyphicon glyphicon-edit icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
-                echo '        <a class="btn btn-danger" href="'.site_url('admin/delpasien').'">';
+                echo '        <a class="btn btn-danger" href="'.site_url('paramedis/delpasien').'">';
                 echo '            <i class="glyphicon glyphicon-trash icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
@@ -84,7 +84,7 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form" action="<?php echo site_url('admin/updatepasien'); ?>" method="POST">
+                <form role="form" action="<?php echo site_url('paramedis/updatepasien'); ?>" method="POST">
                     <input type="hidden" placeholder="Enter email" name="id" value="<?php echo $dataedit[0]->id_pasien ?>">
                     <div class="form-group">
                         <label>Nama Pasien</label>

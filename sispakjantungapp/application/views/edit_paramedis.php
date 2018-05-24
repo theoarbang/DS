@@ -1,4 +1,4 @@
-<?php require('header.php'); ?>
+<?php require('header_admin.php'); ?>
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
             <div>

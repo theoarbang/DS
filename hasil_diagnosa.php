@@ -1,4 +1,4 @@
-<?php require('header3.php'); ?>
+<?php $this->load->view('header3') ?>
 
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->

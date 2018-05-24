@@ -1,4 +1,4 @@
-z<?php $this->load->view('header')?>
+<?php $this->load->view('header_paramedis')?>
 
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
@@ -52,14 +52,14 @@ z<?php $this->load->view('header')?>
                 echo '    <td class="center">'.$r->jk_pasien.'</td>';
                 echo '    <td class="center">'.$r->status.'</td>';
                 echo '    <td class="center">';
-                echo '        <a class="btn btn-primary" href="'.site_url('admin/berkunjung/').$r->id_pasien.'">';
+                echo '        <a class="btn btn-primary" href="'.site_url('paramedis/berkunjung/').$r->id_pasien.'">';
                 echo '            Berkunjung';
                 echo '        </a>';
-                echo '        <a class="btn btn-info btn-setting" href="'.site_url('admin/editpasien/').$r->id_pasien.'">';
+                echo '        <a class="btn btn-info btn-setting" href="'.site_url('paramedis/editpasien/').$r->id_pasien.'">';
                 echo '            <i class="glyphicon glyphicon-edit icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
-                echo '        <a class="btn btn-danger" href="'.site_url('admin/delpasien/').$r->id_pasien.'">';
+                echo '        <a class="btn btn-danger" href="'.site_url('paramedis/delpasien/').$r->id_pasien.'">';
                 echo '            <i class="glyphicon glyphicon-trash icon-white"></i>';
                 echo '            ';
                 echo '        </a>';

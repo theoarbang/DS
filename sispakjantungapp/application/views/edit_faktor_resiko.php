@@ -1,4 +1,4 @@
-<?php $this->load->view('header');?>
+<?php $this->load->view('header_pakar');?>
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
             <div>
@@ -45,11 +45,11 @@
                 echo   '  <td class="center">'.$r->nama_jns_faktor_gejala.'</td>';
                 echo   '  <td class="center">'.$r->densitas.'</td>';
                 echo    ' <td class="center">';
-                echo       '  <a class="btn btn-info btn-setting" href="'.site_url('admin/editfresikogejala/'.$r->id_faktor_resiko_gejala).'">';
+                echo       '  <a class="btn btn-info btn-setting" href="'.site_url('pakar/editfresikogejala/'.$r->id_faktor_resiko_gejala).'">';
                 echo            ' <i class="glyphicon glyphicon-edit icon-white"></i>';
                 echo             ' ';
                 echo       '  </a>';
-                echo        ' <a class="btn btn-danger" href="'.site_url('admin/delfresikogejala/'.$r->id_faktor_resiko_gejala).'">';
+                echo        ' <a class="btn btn-danger" href="'.site_url('pakar/delfresikogejala/'.$r->id_faktor_resiko_gejala).'">';
                 echo             '<i class="glyphicon glyphicon-trash icon-white"></i>';
                 echo             ' ';
                 echo        ' </a>';
@@ -74,7 +74,7 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form" action="<?php echo site_url('admin/updatefresikogejala');?>" method="POST">
+                <form role="form" action="<?php echo site_url('pakar/updatefresikogejala');?>" method="POST">
                     <input type="hidden" value="<?php echo $dataedit[0]->id_faktor_resiko_gejala; ?>" name="no">
                     <div class="form-group">
                         <label>Nama Jenis Faktor Resiko Gejala</label>

@@ -1,4 +1,5 @@
 <?php require('header_pakar.php'); ?>
+
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
             <div>
@@ -7,7 +8,7 @@
                         <a href="beranda.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Tindakan</a>
+                        <a href="#">Tindakan Diagnosa</a>
                     </li>
                 </ul>
             </div>
@@ -16,7 +17,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-list"></i> List Tindakan</h2>
+                <h2><i class="glyphicon glyphicon-list"></i> List Rule / Keputusan</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -24,36 +25,36 @@
                 </div>
             </div>
             <div class="box-content">
-                <input type="text" id="search" placeholder="Pencarian..."></input>
                 <table class="table table-striped table-bordered responsive" id="myTable">
                 <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Nama Diagnosa</th>
                     <th>Nama Tindakan</th>
-                    <th>Detail</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php 
+                 <?php 
                 $i = 1;
                 foreach ($records as $r) { 
                 echo '<tr>';
-                echo '    <td>'.$r->id_tindakan.'</td>';
+                echo '    <td>'.$r->id_diagnosa_tindakan.'</td>';
+                echo '    <td class="center">'.$r->nama_diagnosa.'</td>';
                 echo '    <td class="center">'.$r->nama_tindakan.'</td>';
-                echo '    <td class="center">'.$r->detail.'</td>';
                 echo '    <td class="center">';
-                echo '        <a class="btn btn-info btn-setting" href="'.site_url('pakar/edittindakan/').$r->id_tindakan.'">';
+                echo '        <a class="btn btn-info btn-setting" href="'.site_url('pakar/edittindakandiagnosa/').$r->id_diagnosa_tindakan.'">';
                 echo '            <i class="glyphicon glyphicon-edit icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
-                echo '        <a class="btn btn-danger" href="'.site_url('pakar/deltindakan/').$r->id_tindakan.'">';
+                echo '        <a class="btn btn-danger" href="'.site_url('pakar/deltindakandiagnosa/').$r->id_diagnosa_tindakan.'">';
                 echo '            <i class="glyphicon glyphicon-trash icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
                 echo '    </td>';
-                echo ' </tr>';
-            }?>
+                echo '</tr>';
+            }
+            ?>
                 </tbody>
                 </table>
             </div>
@@ -62,7 +63,7 @@
     <div class="box col-md-12">
         <div class="box-inner">
             <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Administrator</h2>
+                <h2><i class="glyphicon glyphicon-plus"></i> Tambah Tindakan Diagnosa</h2>
 
                 <div class="box-icon">
                     <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -71,18 +72,36 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form" action="<?php echo site_url('pakar/addtindakan') ?>" method="POST">
-                    <input type="hidden" placeholder="Enter email">
-                    <div class="form-group">
-                        <label>Nama Tindakan</label>
-                        <input type="text" class="form-control" placeholder="Nama Tindakan" name="nama_tindakan">
+                <form role="form" action="<?php echo site_url('pakar/addtindakandiagnosa'); ?>" method="POST">
+                    <input type="hidden" placeholder="Enter email" name="id" value="">
+                     <div class="form-group">
+                        <label>Diagnosa</label>
+                        <!--
+                        <input type="text" class="form-control" placeholder="Nama Jenis Faktor Resiko Gejala">
+                        -->
+                          <select class="form-control" id="sel1" name="diagnosa">
+                            <option>-----Pilih------</option>
+                            <?php 
+                                foreach($records2 as $r){
+                                    echo '<option value="'.$r->id_diagnosa.'">'.$r->id_diagnosa."-  ".$r->nama_diagnosa.'</option>';
+                                }
+                            ?>
+                          </select>
                     </div>
                     <div class="form-group">
-                        <label>Detail</label>
-                        <textarea name="detail" id="tmce" cols="30" rows="10">
-
-                        </textarea>
-                    </div>                    
+                        <label>Tindakan</label>
+                        <!--
+                        <input type="text" class="form-control" placeholder="Nama Jenis Faktor Resiko Gejala">
+                        -->
+                          <select class="form-control" id="sel1" name="tindakan">
+                             <option>-----Pilih------</option>
+                            <?php 
+                                foreach($records3 as $r){
+                                    echo '<option value="'.$r->id_tindakan.'">'.$r->id_tindakan."-  ".$r->nama_tindakan.'</option>';
+                                }
+                            ?>
+                          </select>
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 </div>
@@ -113,9 +132,4 @@
     </div>
 
     <hr>
-
-<script src="<?php echo base_url();?>external/tinymce/js/tinymce/tinymce.min.js"></script>
-<script type='text/javascript'> 
-    tinymce.init({selector:'#tmce'});
-</script>
 <?php require('footer.php'); ?>

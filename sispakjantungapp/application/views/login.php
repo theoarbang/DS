@@ -75,30 +75,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row">
         <div class="well col-md-5 center login-box">
-            <form class="form-horizontal" action="login" method="post">
+            <?php echo form_open('Login/dologin');?>
                 <fieldset>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" placeholder="Username" name="username">
                     </div>
                     <div class="clearfix"></div><br>
 
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
                     <div class="clearfix"></div>
                     <br>
                     <label>Status Login</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Administrator
+                            <input type="radio" name="level" id="inlineRadio1" value="1"> Administrator
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Pakar
+                            <input type="radio" name="level" id="inlineRadio2" value="2"> Pakar
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Paramedis
+                            <input type="radio" name="level" id="inlineRadio2" value="0"> Paramedis
                         </label>
                     <div class="clearfix"></div>
 
@@ -106,6 +106,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <button type="submit" class="btn btn-primary">Login</button>
                     </p>
                 </fieldset>
+                <?php if ($this->session->flashdata()) { ?>
+                    <div class="alert alert-warning">
+                        <?= $this->session->flashdata('msg'); ?>
+                    </div>
+                <?php } ?>
             </form>
         </div>
         <!--/span-->

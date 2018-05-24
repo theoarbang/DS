@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> paramedis</span>
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
 <div class="ch-container">
     <div class="row">
         
-<!-- left menu starts -->
+        <!-- left menu starts -->
         <div class="col-sm-2 col-lg-2">
             <div class="sidebar-nav">
                 <div class="nav-canvas">
@@ -103,11 +103,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Menu Utama</li>
-                        <li><a class="ajax-link" href="<?php echo site_url('paramedis/beranda'); ?>"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/beranda');?>"><i class="glyphicon glyphicon-home"></i><span> Beranda</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo site_url('paramedis/kunjungan/').$this->session->userdata('id_pasien'); ?>"><i class="glyphicon glyphicon-home"></i><span> Kunjungan</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/admin');?>"><i class="glyphicon glyphicon-user"></i><span> Daftar Admin / Pakar</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo site_url('paramedis/pasien') ?>"><i class="glyphicon glyphicon-share-alt"></i><span> Kembali Daftar Pasien</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/paramedis');?>"><i class="glyphicon glyphicon-user"></i><span> Daftar Paramedis</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="<?php echo site_url('admin/bantuan');?>"><i class="glyphicon glyphicon-question-sign"></i><span> Bantuan</span></a>
                         </li>
                     </ul>
                     <!--
@@ -117,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
             </div>
         </div>
         <!--/span-->
-<!-- left menu ends -->
+        <!-- left menu ends -->
 
         <noscript>
             <div class="alert alert-block col-md-12">
@@ -127,4 +129,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
                     enabled to use this site.</p>
             </div>
         </noscript>
-

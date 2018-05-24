@@ -30,46 +30,41 @@
             </div>
             <div class="box-content row">
                 <div class="box-content col-md-6">
-                <form role="form">
-                    <input type="hidden" placeholder="">
+                <form role="form" action="<?php echo site_url('diagnosa') ?>" method="POST">
+                    <input type="hidden" placeholder="" name="id" value="<?php echo $dataedit[0]->id_pasien ?>">
                     <div class="form-group">
                         <label>Nama Pasien</label>
                         <input type="text" class="form-control" placeholder="Nama Pasien" value="<?php echo $dataedit[0]->nama_pasien?>" disabled>
                     </div>
+                    <label>Faktor Resiko (Pilih Sesuai Kondisi Anda...)</label>
+                    <?php 
+                        foreach($records1 as $r){
+                            echo '<div class="form-group">';
+                            echo '<label class="checkbox-inline">';
+                            echo '    <input type="checkbox" id="inlineCheckbox1" value="'.$r->id_faktor_resiko_gejala.'" name="gejala[]">'.$r->nama_faktor_resiko_gejala;
+                            echo '</label>';
+                            echo '</div>';
+                        }
+                    ?>
+                </div>
+                <div class="box-content col-md-6">
                     <div class="form-group">
                         <label>Usia Pasien</label>
                         <input type="text" class="form-control" placeholder="Usia Pasien" value="<?php echo $umur ?>" disabled>
                     </div>
-
-                    <div class="form-group">
-                        <label>Tinggi Pasien</label>
-                        <input type="text" class="form-control" placeholder="Tinggi Pasien" name="tinggi_badan">
-                    </div>
-                    <div class="form-group">
-                        <label>Berat Pasien</label>
-                        <input type="text" class="form-control" placeholder="Berat Pasien" name="berat_badan">
-                    </div>
+                    <label>Gejala (Pilih Sesuai Kondisi Anda...)</label>
+                    <?php 
+                        foreach($records2 as $r){
+                            echo '<div class="form-group">';
+                            echo '<label class="checkbox-inline">';
+                            echo '    <input type="checkbox" id="inlineCheckbox1" value="'.$r->id_faktor_resiko_gejala.'"name="gejala[]">'.$r->nama_faktor_resiko_gejala;
+                            echo '</label>';
+                            echo '</div>';
+                        }
+                    ?>
                 </div>
                 <div class="box-content col-md-6">
-                    <div class="form-group">
-                        <label>Nadi Pasien</label>
-                        <input type="text" class="form-control" placeholder="Nadi Pasien" name="nadi">
-                    </div>
-                    <div class="form-group">
-                        <label>Tekanan Darah Pasien</label>
-                        <input type="text" class="form-control" placeholder="Tekanan Darah Pasien" name="tekanan_darah">
-                    </div>
-                    <div class="form-group">
-                        <label>Gula Darah</label>
-                        <input type="text" class="form-control" placeholder="Gula Darah Pasien" name="gula_darah">
-                    </div>
-                    <div class="form-group">
-                        <label>Kolesterol Pasien</label>
-                        <input type="text" class="form-control" placeholder="Kolesterol Pasien" name="kolesterol">
-                    </div>
-                </div>
-                <div class="box-content col-md-6">
-                    <button type="submit" class="btn btn-success">Lanjutkan</button>
+                    <button type="submit" class="btn btn-success">Diagnosa</button>
                 </div>
                 </form>
                 </div>

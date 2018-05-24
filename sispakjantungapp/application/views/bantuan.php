@@ -1,4 +1,12 @@
-<?php require('header.php'); ?>
+<?php 
+if ($this->session->userdata('level')==1) {
+    require('header_admin.php'); 
+} else if ($this->session->userdata('level')==2){
+    require('header_pakar.php'); 
+}else{
+    require('header_paramedis.php'); 
+}
+?>
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
             <div>

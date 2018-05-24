@@ -3,84 +3,99 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function __construct()
-        {
-                parent::__construct();
-                //Do your magic here
-                $this->load->library('session');
-                $this->load->helper(array('form', 'url'));
-        }
+    public function __construct() {
+        parent::__construct();
+        
+        //load the required libraries and helpers for login
+        $this->load->helper('url');
+        $this->load->library(['form_validation','session']);
+        $this->load->database();
+        
+        //load the Login Model
+        $this->load->model('login_model');
+    }
 
-        public function index(){
-
-                if($this->session->userdata('login')){
-                        redirect('dashboard','refresh');
-                }
-
-
-                
-                $this->load->library('form_validation');
-                $this->load->database();      
-                $this->form_validation->set_rules('username', 'User name',  'callback_username_check');
-                $this->form_validation->set_rules('password', 'Password', 'callback_password_check');
-
-                $query = $this->db->get('user');
-                $data = $query->result();
-
-                if ($this->form_validation->run() == FALSE)
-                {
-                        $this->load->view('header');
-                        $this->load->view('login');
-                        $this->load->view('footer');
-                }
-                else
-                {
-                        $newdata = array(
-                                'username'  => $this->input->post('username'),
-                                'password'  => $this->input->post('password'),
-                                'login'     => TRUE
-                        );
-
-                        $this->session->set_userdata($newdata);
-                        redirect('dashboard','refresh');
-                }
-                
-        }
-
-        public function username_check($str)
-        {
-                $this->load->database();
-                $query = $this->db->get('user');
-                $data = $query->result();
-
-                if ($str != $data[0]->user)
-                {
-                        $this->form_validation->set_message('username_check', '{field} yang anda masukkan salah!');
-                        return FALSE;
-                }
-                else
-                {
-                        return TRUE;
+    public function index() {
+        //check if the user is already logged in 
+        $logged_in = $this->session->userdata('logged_in');
+        $level = $this->session->userdata('level');
+        if($logged_in){
+                switch ($level) {
+                        case 1:
+                                redirect('admin');
+                                break;
+                        case 2:
+                                redirect('pakar');
+                                break;
+                        default:
+                                redirect('paramedis');
+                                break;
                 }
         }
+        //if not load the login page
+        $this->load->view('login');
+    }
 
-        public function password_check($str)
-        {
-                $this->load->database();
-                $query = $this->db->get('user');
-                $data = $query->result();
+    public function doLogin() {
+        //get the input fields from login form
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $level = $this->input->post('level');
 
-                if ($str != $data[0]->password)
-                {
-                        $this->form_validation->set_message('password_check', '{field} yang anda masukkan salah!');
-                        return FALSE;
+        if ($level == 1) {
+                $check_login = $this->login_model->checkLoginAdminPakar($username, $password, $level);
+                //if the result is query result is 1 then valid user
+                if ($check_login) {
+                    //if yes then set the session 'loggin_in' as true
+                    $this->session->set_userdata('logged_in', true);
+                    $this->session->set_userdata('level', $level);
+                    redirect('admin');
+                } else {
+                    //if no then set the session 'logged_in' as false
+                    $this->session->set_userdata('logged_in', false);
+                    //and redirect to login page with flashdata invalid msg
+                    $this->session->set_flashdata('msg', 'Username / Password Invalid');
+                    redirect('login');            
                 }
-                else
-                {
-                        return TRUE;
+        } else if ($level == 2) {
+               $check_login = $this->login_model->checkLoginAdminPakar($username, $password, $level);
+                //if the result is query result is 1 then valid user
+                if ($check_login) {
+                    //if yes then set the session 'loggin_in' as true
+                    $this->session->set_userdata('logged_in', true);
+                    $this->session->set_userdata('level', $level);
+                    redirect('pakar');
+                } else {
+                    //if no then set the session 'logged_in' as false
+                    $this->session->set_userdata('logged_in', false);
+                    //and redirect to login page with flashdata invalid msg
+                    $this->session->set_flashdata('msg', 'Username / Password Invalid');
+                    redirect('login');            
+                }
+        }else {
+                $check_login = $this->login_model->checkLoginParamedis($username, $password);
+                //if the result is query result is 1 then valid user
+                if ($check_login) {
+                    //if yes then set the session 'loggin_in' as true
+                    $this->session->set_userdata('logged_in', true);
+                    $this->session->set_userdata('level', $level);
+                    redirect('paramedis');
+                } else {
+                    //if no then set the session 'logged_in' as false
+                    $this->session->set_userdata('logged_in', false);
+                    //and redirect to login page with flashdata invalid msg
+                    $this->session->set_flashdata('msg', 'Username / Password Invalid');
+                    redirect('login');            
                 }
         }
+    }
 
+    public function logout() {
+        //unset the logged_in session and redirect to login page
+        $this->session->unset_userdata('logged_in');
+        $this->session->unset_userdata('level');
+        redirect('login');
+    }
 
 }
 

@@ -1,4 +1,4 @@
-<?php require('header.php'); ?>
+<?php require('header_pakar.php'); ?>
 
 <div id="content" class="col-lg-10 col-sm-10">
 <!-- content starts -->
@@ -45,11 +45,11 @@
                 echo '    <td class="center">'.$r->nama_diagnosa    .'</td>';
                 echo '    <td class="center">'.$r->densitas.'</td>';
                 echo '    <td class="center">';
-                echo '        <a class="btn btn-info btn-setting" href="'.site_url('admin/editrule/').$r->id_keputusan.'">';
+                echo '        <a class="btn btn-info btn-setting" href="'.site_url('pakar/editrule/').$r->id_keputusan.'">';
                 echo '            <i class="glyphicon glyphicon-edit icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
-                echo '        <a class="btn btn-danger" href="'.site_url('admin/delrule/').$r->id_keputusan.'">';
+                echo '        <a class="btn btn-danger" href="'.site_url('pakar/delrule/').$r->id_keputusan.'">';
                 echo '            <i class="glyphicon glyphicon-trash icon-white"></i>';
                 echo '            ';
                 echo '        </a>';
@@ -74,7 +74,7 @@
             </div>
             <div class="box-content row">
                 <div class="box-content">
-                <form role="form" action="<?php echo site_url('admin/addrule'); ?>" method="POST">
+                <form role="form" action="<?php echo site_url('pakar/addrule'); ?>" method="POST">
                     <input type="hidden" placeholder="Enter email">
                     <div class="form-group">
                         <label>Faktor resiko / Gejala</label>
