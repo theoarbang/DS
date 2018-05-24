@@ -35,7 +35,6 @@ class Diagnosa extends CI_Controller {
 				$hitung = $this->hitungDensitas($input_gejala);
 				unset($hitung["&theta;"]);
 				arsort($hitung);
-
 				$codes=array_keys($hitung);
 				$sql="SELECT GROUP_CONCAT(nama_diagnosa) 
 					FROM tb_diagnosa 

@@ -126,6 +126,11 @@ class Paramedis extends CI_Controller {
 				WHERE a.id_diagnosa_kunjungan = ".$id;
 		$query = $this->db->query($sql);
 		$data['records'] = $query->result();
+		$newd = array(
+			'id_pasien' => $data['records'][0]->id_pasien
+		);
+		
+		$this->session->set_userdata( $newd );
 		$this->load->view('hasil_diagnosa_kunjungan',$data);
 	}
 	//----------------Kunjungan-------------------------------------------------------------
