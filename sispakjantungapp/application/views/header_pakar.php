@@ -109,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
                         </li>
                         <li><a class="ajax-link" href="<?php echo site_url('pakar/fresikogejala');?>"><i class="glyphicon glyphicon-list-alt"></i><span> Faktor Resiko Gejala</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo site_url('pakar/rule');?>"><i class="glyphicon glyphicon-list-alt"></i><span> Rule / Keputusan</span></a>
+                        <li><a class="ajax-link" href="<?php echo site_url('pakar/rule');?>"><i class="glyphicon glyphicon-list-alt"></i><span> Rule</span></a>
                         </li>
                         <li><a class="ajax-link" href="<?php echo site_url('pakar/diagnosa');?>"><i class="glyphicon glyphicon-tasks"></i><span> Diagnosa</span></a>
                         </li>

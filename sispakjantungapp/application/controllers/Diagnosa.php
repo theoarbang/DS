@@ -29,23 +29,26 @@ class Diagnosa extends CI_Controller {
 	public function index()
 	{
 			$input_gejala = $this->gejala($this->input->post('gejala'));
-			if (count($input_gejala)<2) {
-				echo "Gejala min 2";
+			if (count($input_gejala)<4) {
+				echo "Gejala min 5";
+				exit();
 			} else {
 				$hitung = $this->hitungDensitas($input_gejala);
+				//ranking
 				unset($hitung["&theta;"]);
 				arsort($hitung);
 				$codes=array_keys($hitung);
-				$sql="SELECT GROUP_CONCAT(nama_diagnosa) 
-					FROM tb_diagnosa 
+				$sql="SELECT GROUP_CONCAT(nama_diagnosa)
+					FROM tb_diagnosa
 					WHERE id_diagnosa IN('{$codes[0]}')";
 				$db = $this->cdb->db();
 				$result=$db->query($sql);
 				$row=$result->fetch_row();
 				$data['diagnosa'] = $row[0];
-				$data['densitas'] = round($hitung[$codes[0]]*100,2);
-				
+				$data['densitas'] = round($hitung[$codes[0]]*100,5);
+
 				$sql = "SELECT tb_tindakan.*, tb_tindakan_diagnosa.* FROM tb_tindakan_diagnosa INNER JOIN tb_tindakan ON tb_tindakan.id_tindakan = tb_tindakan_diagnosa.id_tindakan WHERE tb_tindakan_diagnosa.id_diagnosa = ".$codes[0];
+				print($codes[0][0]);
 				$query = $this->db->query($sql);
 				$data['tindakan'] = $query->result();
 
@@ -69,7 +72,7 @@ class Diagnosa extends CI_Controller {
 			if ($iditem == NULL) {
 				$iditem = 1;
 			}
-			
+
 			$data2 = array(
 				'id_diagnosa_kunjungan' => $iditem,
 				'id_pasien' => $id,
@@ -82,15 +85,15 @@ class Diagnosa extends CI_Controller {
 			$this->kunjungan_model->addkunjungan($data2);
 
 			//add item faktor resiko gejala
-			
+
 			foreach ($data_gejala as $r) {
 				$data2 = array(
 				'id_diagnosa_kunjungan' => $iditem,
-				'id_faktor_resiko_gejala'  => $r->id_faktor_resiko_gejala	
+				'id_faktor_resiko_gejala'  => $r->id_faktor_resiko_gejala
 				);
 				$this->kunjungan_model->additemkunjungan($data2);
 			}
-			
+
 
 			//ambil data tindakan
 			$this->load->view('hasil_diagnosa',$data);
@@ -102,7 +105,7 @@ class Diagnosa extends CI_Controller {
 			FROM tb_keputusan a
 			JOIN tb_diagnosa b ON a.id_diagnosa=b.id_diagnosa
 			JOIN tb_faktor_resiko_gejala c ON a.id_faktor_resiko_gejala = c.id_faktor_resiko_gejala
-			WHERE a.id_faktor_resiko_gejala IN(".implode(',',$gejala).") 
+			WHERE a.id_faktor_resiko_gejala IN(".implode(',',$gejala).")
 			GROUP BY a.id_faktor_resiko_gejala";
 		$db = $this->cdb->db();
 		$query=$db->query($sql);
@@ -137,7 +140,7 @@ class Diagnosa extends CI_Controller {
 				 		}
 				 	}
 			 	}
-			 	
+
 			$theta=1;
 			foreach($densitas2 as $d) $theta-=$d[1];
 			$densitas2[]=array($fod,$theta);
